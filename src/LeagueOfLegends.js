@@ -4,6 +4,7 @@ const filterTag = async (tag) => {
     const req = await fetch(API_BASE)
     const json = await req.json()
     const filterData = Object.values(json.data).filter( p => p.tags[0] === tag)
+    console.log(filterData)
     return filterData
 }
 
