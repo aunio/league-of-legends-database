@@ -7,9 +7,9 @@ import './App.css'
 
 export default () => {
 
-    const [ championList, setChampionList ] = useState([])
+    const [championList, setChampionList] = useState([])
 
-    useEffect( () => {
+    useEffect(() => {
         const loadAll = async () => {
             let list = await LeagueOfLegends.getHomeList()
             setChampionList(list)
@@ -18,19 +18,37 @@ export default () => {
         loadAll()
     }, [])
 
-    return(
+    return (
         <>
+
             <Header />
-            <div className="page">
-                <section className="list">
-                    {championList.map( (item, key) => (
-                        <MovieRow
-                            key={key}
-                            title={item.title}
-                            items={item.items} />
-                    ))}
+
+            <section id="page-home">
+
+                <section id="heroArea" className="text-center">
+                    <h1 className="title">
+                        <span className="title__choose-your">Escolha seu</span>
+                        <span className="title__champion">Campeão</span>
+                    </h1>
                 </section>
-            </div>
+
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="page">
+                                <section className="list">
+                                    {championList.map((item, key) => (
+                                        <MovieRow
+                                            key={key}
+                                            title={item.title}
+                                            items={item.items} />
+                                    ))}
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

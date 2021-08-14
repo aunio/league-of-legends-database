@@ -1,3 +1,55 @@
+@font-face {
+  font-family: "Beaufort for LOL";
+  src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-Regular.woff);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Beaufort for LOL";
+  src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-Bold.woff);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Beaufort for LOL";
+  src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-HeavyItalic.woff);
+  font-weight: 900;
+}
+
 body {
   margin: 0;
+}
+
+#heroArea {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #f0f0f0 53%, #fff 54%, #fff 100%);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.title {
+  font-family: Beaufort for LOL;
+  text-transform: uppercase;
+  color: #010101;
+}
+
+.title__choose-your {
+  display: block;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.title__champion {
+  display: block;
+  font-weight: 900;
+  font-size: 100px;
+}
+
+@media only screen and (max-width: 575px) {
+  .title__choose-your {
+    font-size: 20px;
+  }
+
+  .title__champion {
+    font-size: 60px;
+  }
 }
