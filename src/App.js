@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import LeagueOfLegends from './LeagueOfLegends'
 import MovieRow from './components/ChampionRow/ChampionRow'
+import Header from './components/Header/Header'
+
+import './App.css'
 
 export default () => {
 
@@ -16,7 +19,8 @@ export default () => {
     }, [])
 
     return(
-        <div>
+        <>
+            <Header />
             <div className="page">
                 <section className="list">
                     {championList.map( (item, key) => (
@@ -27,6 +31,6 @@ export default () => {
                     ))}
                 </section>
             </div>
-        </div>
+        </>
     )
 }
