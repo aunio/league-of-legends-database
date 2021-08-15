@@ -15,18 +15,10 @@ h2 {
     overflow: hidden;
 }
 
-.champion-content:hover .champion-content__img {
-    transform: scale(1.1);
-}
-
-.champion-content:hover .champion-content__name {
-    background-color: #061c25;
-}
-
 .champion-content__img {
     width: 100%;
     transform: scale(1.2);
-    transition: all ease 0.1s;
+    transition: all ease 0.4s;
 }
 
 .champion-content__name {
@@ -37,16 +29,29 @@ h2 {
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: #061c25;
-    transition: all ease 0.2s;
+    transition: all ease 0.4s;
 }
 
 .champion-content__name span {
+    padding-left: 20px;
     font-family: Beaufort for LOL;
     font-weight: 700;
     font-style: italic;
     font-size: 20px;
     text-transform: uppercase;
     color: #fff;
+    transition: 0.4s;
+}
+
+.champion-content:hover .champion-content__img {
+    transform: scale(1.1);
+}
+
+.champion-content:hover .champion-content__name {
+    background-color: #006680;
+}
+
+.champion-content:hover .champion-content__name span {
+    padding-left: 40px;
 }
