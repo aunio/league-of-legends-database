@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LeagueOfLegends from './LeagueOfLegends'
-import MovieRow from './components/ChampionRow/ChampionRow'
+import CategoryChampionList from './components/CategoryChampionList/CategoryChampionList'
 import Header from './components/Header/Header'
 
 import './App.css'
@@ -32,16 +32,12 @@ export default () => {
                     </h1>
                 </section>
 
-                <div className="container">
-                    <div className="row">
-                        {championList.map((item, key) => (
-                            <MovieRow
-                                key={key}
-                                title={item.title}
-                                items={item.items} />
-                        ))}
-                    </div>
-                </div>
+                {championList.map((item, key) => (
+                    <CategoryChampionList
+                        key={key}
+                        title={item.title}
+                        items={item.items} />
+                ))}
             </section>
         </>
     )
