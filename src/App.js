@@ -34,18 +34,12 @@ export default () => {
 
                 <div className="container">
                     <div className="row">
-                        <div className="col-12">
-                            <div className="page">
-                                <section className="list">
-                                    {championList.map((item, key) => (
-                                        <MovieRow
-                                            key={key}
-                                            title={item.title}
-                                            items={item.items} />
-                                    ))}
-                                </section>
-                            </div>
-                        </div>
+                        {championList.map((item, key) => (
+                            <MovieRow
+                                key={key}
+                                title={item.title}
+                                items={item.items} />
+                        ))}
                     </div>
                 </div>
             </section>
