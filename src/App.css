@@ -41,15 +41,25 @@ body {
 .title__champion {
   display: block;
   font-weight: 900;
-  font-size: 100px;
+  font-size: 60px;
 }
 
-@media only screen and (max-width: 575px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .title__choose-your {
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .title__champion {
-    font-size: 60px;
+    font-size: 70px;
   }
+}
+
+@media (min-width: 768px) {
+  .title__choose-your {
+    font-size: 35px;
+  }
+
+  .title__champion {
+    font-size: 90px;
+  } 
 }

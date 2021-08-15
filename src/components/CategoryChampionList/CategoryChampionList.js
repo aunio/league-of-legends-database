@@ -7,11 +7,11 @@ export default ({ title, items }) => {
         <section id="CategoryChampionList" className="mb-5">
             <div className="container">
                 <div className="row">
-                    <h2>{title}</h2>
+                    <h2 className="champion-class-title">{title}</h2>
                     {items.length > 0 && items.map((item, key) => (
                         <div
                             key={key}
-                            className="col-2 p-2">
+                            className="col-6 col-md-4 col-lg-3 col-xl-2 p-2">
                             <div className="champion-content">
                                 <img
                                     key={key}
