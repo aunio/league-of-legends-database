@@ -11,15 +11,29 @@ export default {
     getHomeList: async () => {
         return [
             {
-                tag: 'marksman',
-                title: 'Marksman',
+                title: 'Fighters',
+                items: await filterTag('Fighter')
+            },
+            {
+                title: 'Mages',
+                items: await filterTag('Mage')
+            },
+            {
+                title: 'Marksmans',
                 items: await filterTag('Marksman')
             },
             {
-                tag: 'support',
-                title: 'Support',
+                title: 'Supports',
                 items: await filterTag('Support')
             },
+            {
+                title: 'Assassins',
+                items: await filterTag('Assassin')
+            },
+            {
+                title: 'Tanks',
+                items: await filterTag('Tank')
+            }
         ]
     }
 }

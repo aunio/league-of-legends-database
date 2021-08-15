@@ -9,13 +9,15 @@ export default ({ title, items }) => {
                 <div className="row">
                     <h2>{title}</h2>
                     {items.length > 0 && items.map((item, key) => (
-                        <div className="col-2 p-2">
+                        <div
+                            key={key}
+                            className="col-2 p-2">
                             <div className="champion-content">
                                 <img
+                                    key={key}
                                     className="champion-content__img"
                                     src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${item.id}_0.jpg`}
-                                    alt={item.name}
-                                    key={key} />
+                                    alt={item.name} />
                                 <div className="champion-content__name">
                                     <span>{item.name}</span>
                                 </div>
