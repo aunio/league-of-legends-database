@@ -1,10 +1,9 @@
 import React from 'react';
-import './CategoryChampionList.css'
+import './ClassChampionList.css'
 
-export default ({ title, items }) => {
-
+const ClassChampionsList = ({ title, items }) => {
     return (
-        <section id="CategoryChampionList" className="mb-5">
+        <section id="ClassChampionList" className="mb-5">
             <div className="container">
                 <div className="row">
                     <h2 className="champion-class-title">{title}</h2>
@@ -29,3 +28,5 @@ export default ({ title, items }) => {
         </section>
     )
 }
+
+export default ClassChampionsList;

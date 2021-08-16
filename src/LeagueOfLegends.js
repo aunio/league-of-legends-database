@@ -1,6 +1,13 @@
 const API_BASE = 'http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion.json'
 
-const filterTag = async (tag) => {
+const allChampions = async () => {
+    const req = await fetch(API_BASE)
+    const json = await req.json()
+    const filterData = Object.values(json.data)
+    return filterData
+}
+
+const filterClassChampions = async (tag) => {
     const req = await fetch(API_BASE)
     const json = await req.json()
     const filterData = Object.values(json.data).filter(p => p.tags[0] === tag)
@@ -8,31 +15,38 @@ const filterTag = async (tag) => {
 }
 
 export default {
-    getHomeList: async () => {
+    getAllChampionsList: async () => {
+        return [
+            {
+                items: await allChampions()
+            }
+        ]
+    },
+    getClassChampionList: async () => {
         return [
             {
                 title: 'Fighters',
-                items: await filterTag('Fighter')
+                items: await filterClassChampions('Fighter')
             },
             {
                 title: 'Mages',
-                items: await filterTag('Mage')
+                items: await filterClassChampions('Mage')
             },
             {
                 title: 'Marksmans',
-                items: await filterTag('Marksman')
+                items: await filterClassChampions('Marksman')
             },
             {
                 title: 'Supports',
-                items: await filterTag('Support')
+                items: await filterClassChampions('Support')
             },
             {
                 title: 'Assassins',
-                items: await filterTag('Assassin')
+                items: await filterClassChampions('Assassin')
             },
             {
                 title: 'Tanks',
-                items: await filterTag('Tank')
+                items: await filterClassChampions('Tank')
             }
         ]
     }
