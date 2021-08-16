@@ -1,9 +1,9 @@
 import React from 'react';
-import './AllChampionsList.css'
+import './ChampionsList.css'
 
 const AllChampionsList = ({ items }) => {
     return (
-        <section id="AllChampionsList" className="mb-5">
+        <section id="ChampionsList" className="mb-5">
             <div className="container">
                 <div className="row">
                     <h2 className="champion-class-title">Champions</h2>

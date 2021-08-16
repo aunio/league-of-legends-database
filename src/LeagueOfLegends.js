@@ -15,7 +15,7 @@ const filterClassChampions = async (tag) => {
 }
 
 export default {
-    getAllChampionsList: async () => {
+    getChampionsList: async () => {
         return [
             {
                 items: await allChampions()

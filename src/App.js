@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import LeagueOfLegends from './LeagueOfLegends'
-import AllChampionsList from './components/AllChampionsList/AllChampionsList'
+import ChampionsList from './components/ChampionsList/ChampionsList'
 import Header from './components/Header/Header'
 
 import './App.css'
 
 const HomePage = () => {
 
-    const [allChampionsList, setAllChampionsList] = useState([])
+    const [championsList, setChampionsList] = useState([])
 
     useEffect(() => {
-        const loadAllChampions = async () => {
-            let list = await LeagueOfLegends.getAllChampionsList()
-            setAllChampionsList(list)
+        const loadChampions = async () => {
+            let list = await LeagueOfLegends.getChampionsList()
+            setChampionsList(list)
         }
 
-        loadAllChampions()
+        loadChampions()
     }, [])
 
     return (
@@ -32,8 +32,8 @@ const HomePage = () => {
                     </h1>
                 </section>
 
-                {allChampionsList.map((item, key) => (
-                    <AllChampionsList
+                {championsList.map((item, key) => (
+                    <ChampionsList
                         key={key}
                         items={item.items} />
                 ))}
