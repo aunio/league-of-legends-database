@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import LeagueOfLegends from './LeagueOfLegends'
+import LeagueOfLegends from './services/LeagueOfLegends'
 import ChampionsList from './components/ChampionsList/ChampionsList'
 import Header from './components/Header/Header'
 
