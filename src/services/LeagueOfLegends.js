@@ -3,15 +3,15 @@ const API_BASE = 'http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/cham
 const allChampions = async () => {
     const req = await fetch(API_BASE)
     const json = await req.json()
-    const filterData = Object.values(json.data)
-    return filterData
+    const data = Object.values(json.data)
+    return data
 }
 
 const filterClassChampions = async (tag) => {
     const req = await fetch(API_BASE)
     const json = await req.json()
-    const filterData = Object.values(json.data).filter(p => p.tags[0] === tag)
-    return filterData
+    const data = Object.values(json.data).filter(p => p.tags[0] === tag)
+    return data
 }
 
 export default {
@@ -22,7 +22,7 @@ export default {
             }
         ]
     },
-    getClassChampionList: async () => {
+    getClassChampionLists: async () => {
         return [
             {
                 title: 'Fighters',
