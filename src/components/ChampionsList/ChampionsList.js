@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './ChampionsList.css'
 
 const AllChampionsList = ({ items }) => {
@@ -11,16 +13,18 @@ const AllChampionsList = ({ items }) => {
                         <div
                             key={key}
                             className="col-6 col-md-4 col-lg-3 col-xl-2 p-2">
-                            <div className="champion-content">
-                                <img
-                                    key={key}
-                                    className="champion-content__img"
-                                    src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${item.id}_0.jpg`}
-                                    alt={item.name} />
-                                <div className="champion-content__name">
-                                    <span>{item.name}</span>
+                            <Link to={`/champion/${item.id}`}>
+                                <div className="champion-content">
+                                    <img
+                                        key={key}
+                                        className="champion-content__img"
+                                        src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${item.id}_0.jpg`}
+                                        alt={item.name} />
+                                    <div className="champion-content__name">
+                                        <span>{item.name}</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
