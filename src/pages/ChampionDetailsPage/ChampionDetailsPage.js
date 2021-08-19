@@ -45,11 +45,16 @@ const ChampionDetailsPage = ({ match }) => {
                         <div className="container">
                             <div className="row">
                                 <div className="col-12">
-                                    <div className="hero-img-content text-center">
-                                        <img
-                                            className="img-fluid"
-                                            src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetails[0].id}_0.jpg`}
-                                            alt={championDetails[0].name} />
+                                    <div className="champion-informations">
+                                        <div className="hero-img-content text-center">
+                                            <img
+                                                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetails[0].id}_0.jpg`}
+                                                alt={championDetails[0].name} />
+                                        </div>
+                                        <h1 className="title text-center">
+                                            <span className="champion-title">{championDetails[0].title}</span>
+                                            <span className="champion-name">{championDetails[0].name}</span>
+                                        </h1>
                                     </div>
                                 </div>
                             </div>

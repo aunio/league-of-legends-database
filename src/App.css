@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Beaufort for LOL";
+    src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Beaufort for LOL";
+    src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Beaufort for LOL";
+    src: local(Beaufort for LOL), url(./assets/fonts/BeaufortforLOL-HeavyItalic.woff);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Spiegel";
+    src: local(Spiegel), url(./assets/fonts/Spiegel-SemiBold.woff);
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+}

@@ -1,4 +1,4 @@
-const API_BASE = 'http://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US'
+const API_BASE = 'http://ddragon.leagueoflegends.com/cdn/11.16.1/data/pt_BR'
 
 const allChampions = async () => {
     const req = await fetch(`${API_BASE}/champion.json`)
