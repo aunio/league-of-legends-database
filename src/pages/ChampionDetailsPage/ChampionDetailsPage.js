@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LeagueOfLegends from '../../services/LeagueOfLegends'
 
-import './ChampionDetailsPage'
+import './ChampionDetailsPage.css'
 
 import Header from '../../components/Header/Header'
 import Loader from '../../components/Loader/Loader'
@@ -29,9 +29,35 @@ const ChampionDetailsPage = ({ match }) => {
             ) : (
                 <>
                     <Header />
-                    <p>{championDetails[0].id}</p>
+
+                    <section id="champions-details-page">
+                        <div className="hero-img-background"
+                            style={{
+                                backgroundImage: `url(http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetails[0].id}_0.jpg)`,
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '100%'
+                            }}>
+                            <img
+                                className="img-fluid"
+                                src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetails[0].id}_0.jpg`}
+                                alt={championDetails[0].name} />
+                        </div>
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12">
+                                    <div className="hero-img-content text-center">
+                                        <img
+                                            className="img-fluid"
+                                            src={`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championDetails[0].id}_0.jpg`}
+                                            alt={championDetails[0].name} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </>
-            )}
+            )
+            }
         </>
     )
 }

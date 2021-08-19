@@ -1,0 +1,27 @@
+#champions-details-page {
+    position: relative;
+}
+
+.hero-img-background {
+    position: absolute;
+    width: 100%;
+    z-index: -9;
+    padding-bottom: 180px;
+}
+
+.hero-img-background::before{
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(1, 1, 1, 0.6) 0%, rgba(1, 1, 1, 1) 50%);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-img-background img {
+    opacity: 0;
+}
+
+.hero-img-content {
+    padding-top: 30px;
+}
