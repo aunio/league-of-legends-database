@@ -5,7 +5,7 @@ import logoRiotHeader from '../../assets/img/logo-riot.png'
 const Header = () => {
     return (
         <header className="header-content">
-            <img src={logoRiotHeader} alt="" />
+            <img src={logoRiotHeader} alt="Logo Riot" />
         </header>
     )
 }
