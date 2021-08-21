@@ -15,7 +15,7 @@ const ChampionDetailsPage = ({ match }) => {
     const loadChampion = async (id) => {
         const details = await LeagueOfLegends.getChampionDetails(id)
         setChampionDetails(details)
-        setTimeout(() => { setIsLoading(false) }, 1000);
+        setTimeout(() => { setIsLoading(false) }, 2000);
     }
 
     useEffect(() => {
