@@ -13,7 +13,7 @@ const AllChampionsList = ({ items }) => {
                         <div
                             key={key}
                             className="col-6 col-md-4 col-lg-3 col-xl-2 p-2">
-                            <Link to={`/champion/${item.id}`}>
+                            <Link to={`/champions/${item.id}`}>
                                 <div className="champion-content">
                                     <img
                                         key={key}
