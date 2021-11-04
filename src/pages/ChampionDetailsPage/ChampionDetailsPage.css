@@ -22,7 +22,7 @@
     opacity: 0;
 }
 
-#champions-details-page .champion-informations {
+#champions-details-page .champion-splash {
     position: relative;
 }
 
@@ -45,26 +45,32 @@
 }
 
 #champions-details-page .title {
-    position: absolute;
     color: #fff;
     text-transform: uppercase;
     font-style: italic;
+}
+
+#champions-details-page .champion-informations {
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
+    margin-top: -100px;
     left: 0;
     right: 0;
-    bottom: 10px;
+    /* background-color: #010101; */
 }
 
 #champions-details-page .champion-title {
     display: block;
     font-family: Spiegel;
     font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
 }
 
 #champions-details-page .champion-name {
     display: block;
     font-family: Beaufort for LOL;
     font-size: 80px;
-    font-weight: 700;
+    font-weight: 900;
 }
